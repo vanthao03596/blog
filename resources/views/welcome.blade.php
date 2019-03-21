@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Seosight - Blog</title>
 
-    <link rel='stylesheet' href='{{ mix('css/mix.css') }}' type='text/css'>
+    <link rel='stylesheet' href='{{ mix('css/app.css') }}' type='text/css'>
 
     <!--Styles for RTL-->
 
