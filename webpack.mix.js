@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+require('laravel-mix-purgecss');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -23,7 +23,7 @@ mix.scripts([
     "public/js/ScrollMagic.min.js",
     "public/js/animation.velocity.min.js",
 ], 'public/js/mix.js')
-    .styles([
+    .combine([
        'public/css/fonts.css',
        'public/css/crumina-fonts.css',
        'public/css/normalize.css',
@@ -37,4 +37,4 @@ mix.scripts([
        'public/css/swiper.min.css',
        'public/css/primary-menu.css',
        'public/css/magnific-popup.css',
-   ], 'public/css/mix.css');
+   ], 'public/css/mix.css').purgeCss();
