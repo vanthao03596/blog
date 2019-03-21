@@ -17,13 +17,16 @@ const path = require('path');
 mix.scripts([
     "public/js/jquery-2.1.4.min.js",
     "public/js/crum-mega-menu.js",
-    "public/js/swiper.jquery.min.js",
     "public/js/theme-plugins.js",
     "public/js/main.js",
-    "public/js/form-actions.js",
     "public/js/smooth-scroll.min.js",
     "public/js/velocity.min.js",
     "public/js/ScrollMagic.min.js",
     "public/js/animation.velocity.min.js",
 ], 'public/js/mix.js')
-    .sass('resources/sass/app.scss', 'public/css').purgeCss();
+    .sass('resources/sass/app.scss', 'public/css').purgeCss({
+    paths: () => glob.sync([
+            path.join(__dirname, 'resources/**/*.blade.php'),
+            path.join(__dirname, 'public/js/**/*.js'),
+        ]),
+    });

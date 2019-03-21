@@ -6,17 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Seosight - Blog</title>
-
+    <link rel="stylesheet" href="{{ asset('css/fonts.css') }}" type='text/css'>
     <link rel='stylesheet' href='{{ mix('css/app.css') }}' type='text/css'>
-
-    <!--Styles for RTL-->
-
-    <!--<link rel="stylesheet" type="text/css" href="css/rtl.css">-->
-
-    <!--External fonts-->
-
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 </head>
 
 
@@ -600,97 +592,6 @@
 
                 </article>
 
-                <article class="hentry post post-standard has-post-thumbnail slider">
-
-
-                    <div class="swiper-container post-standard-thumb-slider">
-
-                        <div class="swiper-wrapper">
-
-                            <div class="post-thumb swiper-slide">
-                                <img src="img/post3.jpg" alt="video">
-                                <div class="overlay"></div>
-                            </div>
-
-                            <div class="post-thumb swiper-slide">
-                                <img src="img/post3.jpg" alt="video">
-                                <div class="overlay"></div>
-                            </div>
-
-                            <div class="post-thumb swiper-slide">
-                                <img src="img/post3.jpg" alt="video">
-                                <div class="overlay"></div>
-                            </div>
-
-                            <div class="post-thumb swiper-slide">
-                                <img src="img/post3.jpg" alt="video">
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-
-                    </div>
-                    <div class="post__content">
-
-                        <div class="post__author author vcard">
-                            <img src="img/avatar6.png" alt="author">
-                            Posted by
-
-                            <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">David Brown</a>
-                            </div>
-
-                        </div>
-
-                        <div class="post__content-info">
-
-                            <h2 class="post__title entry-title ">
-                                <a href="15_blog_details.html">Photo with Slider Post Format</a>
-                            </h2>
-
-                            <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-04-08 12:00:00">
-                                            April 8, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Business,</a>
-                                        <a href="#">Seo</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        0
-                                    </span>
-
-
-                            </div>
-
-
-                            <p class="post__text">Nam liber tempor cum soluta nobis eleifend option congue nihil
-                                imperdiet doming id quod mazim placerat facer.
-                            </p>
-
-                            <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                <span class="text">Continue Reading</span>
-                                <i class="seoicon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </article>
-
                 <article class="hentry post post-standard has-post-thumbnail quote">
 
                     <div class="post-thumb bg-boxed-dark">
@@ -816,68 +717,6 @@
                             <p class="post__text">Mirum est notare quam littera gothica, quam nunc putamus parum claram,
                                 anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima
                                 est etiam processus.
-                            </p>
-
-                            <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                <span class="text">Continue Reading</span>
-                                <i class="seoicon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="hentry post post-standard has-post-thumbnail audio">
-
-                    <div class="post-thumb">
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205462171&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                    </div>
-
-                    <div class="post__content">
-
-                        <div class="post__author author vcard">
-                            <img src="img/avatar9.png" alt="author">
-                            Posted by
-
-                            <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">Jassie Bush</a>
-                            </div>
-
-                        </div>
-
-                        <div class="post__content-info">
-
-                            <h2 class="post__title entry-title ">
-                                <a href="15_blog_details.html">Audio Post Format</a>
-                            </h2>
-
-                            <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-03-28 12:00:00">
-                                            March 28, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Podcasts,</a>
-                                        <a href="#">Courses</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        7
-                                    </span>
-
-                            </div>
-
-                            <p class="post__text">Nam liber tempor cum soluta nobis eleifend option congue nihil
-                                imperdiet doming id quod mazim placerat facer.
                             </p>
 
                             <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
