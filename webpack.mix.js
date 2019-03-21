@@ -1,5 +1,8 @@
 const mix = require('laravel-mix');
 require('laravel-mix-purgecss');
+const glob = require('glob-all');
+const path = require('path');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -23,18 +26,4 @@ mix.scripts([
     "public/js/ScrollMagic.min.js",
     "public/js/animation.velocity.min.js",
 ], 'public/js/mix.js')
-    .combine([
-       'public/css/fonts.css',
-       'public/css/crumina-fonts.css',
-       'public/css/normalize.css',
-       'public/css/grid.css',
-       'public/css/base.css',
-       'public/css/blocks.css',
-       'public/css/layouts.css',
-       'public/css/modules.css',
-       'public/css/widgets-styles.css',
-       'public/css/jquery.mCustomScrollbar.min.css',
-       'public/css/swiper.min.css',
-       'public/css/primary-menu.css',
-       'public/css/magnific-popup.css',
-   ], 'public/css/mix.css').purgeCss();
+    .sass('resources/sass/app.scss', 'public/css').purgeCss();
