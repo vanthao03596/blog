@@ -2,6 +2,8 @@
 
 namespace App\Http\Front\Controllers;
 
+use Domain\Article\Models\Article;
+
 class HomeController
 {
     /**
@@ -11,6 +13,6 @@ class HomeController
      */
     public function index()
     {
-        return view('home');
+        return view('welcome');
     }
 }

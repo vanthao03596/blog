@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from html.crumina.net/html-seosight/14_blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Mar 2019 15:30:53 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -24,7 +23,7 @@
 
             <div class="logo">
                 <a href="index.html" class="full-block-link"></a>
-                <img src="img/logo-eye.png" alt="Seosight">
+                <img src="{{ asset('img/logo-eye.png') }}" alt="Seosight">
                 <div class="logo-text">
                     <div class="logo-title">Seosight</div>
                     <div class="logo-sub-title">SEO, Digital Marketing</div>
@@ -211,7 +210,7 @@
                                     <ul>
                                         <li>
                                             <div class="google-logo">
-                                                <img src="img/google-logo.png" alt="logo">
+                                                <img src="{{ asset('img/google-logo.png') }}" alt="logo">
                                             </div>
 
                                             <p class="google-text">The Yoast Analytics plugin lets you easily
@@ -325,7 +324,7 @@
 
             <div class="logo">
                 <a href="index.html" class="full-block-link"></a>
-                <img src="img/logo-eye.png" alt="Seosight">
+                <img src="{{ asset('img/logo-eye.png') }}" alt="Seosight">
                 <div class="logo-text">
                     <div class="logo-title">Seosight</div>
                 </div>
@@ -375,7 +374,7 @@
             </p>
 
             <div class="contacts-item">
-                <img src="img/contact4.png" alt="phone">
+                <img src="{{ asset('img/contact4.png') }}" alt="phone">
                 <div class="content">
                     <a href="#" class="title">8 800 567.890.11</a>
                     <p class="sub-title">Mon-Fri 9am-6pm</p>
@@ -383,7 +382,7 @@
             </div>
 
             <div class="contacts-item">
-                <img src="img/contact5.png" alt="phone">
+                <img src="{{ asset('img/contact5.png') }}" alt="phone">
                 <div class="content">
                     <a href="#" class="title">info@seosight.com</a>
                     <p class="sub-title">online support</p>
@@ -391,7 +390,7 @@
             </div>
 
             <div class="contacts-item">
-                <img src="img/contact6.png" alt="phone">
+                <img src="{{ asset('img/contact6.png') }}" alt="phone">
                 <div class="content">
                     <a href="#" class="title">Melbourne, Australia</a>
                     <p class="sub-title">795 South Park Avenue</p>
@@ -459,7 +458,7 @@
                 <article class="hentry post post-standard has-post-thumbnail sticky">
 
                     <div class="post-thumb">
-                        <img src="img/post1.jpg" alt="seo">
+                        <img src="{{ asset('img/post1.jpg') }}" alt="seo">
                         <div class="overlay"></div>
                         <a href="img/post1.jpg" class="link-image js-zoom-image">
                             <i class="seoicon-zoom"></i>
@@ -472,7 +471,7 @@
                     <div class="post__content">
 
                          <div class="post__author author vcard">
-                             <img src="img/avatar6.png" alt="author">
+                             <img src="{{ asset('img/avatar6.png') }}" alt="author">
                              Posted by
 
                              <div class="post__author-name fn">
@@ -527,18 +526,18 @@
                 <article class="hentry post post-standard has-post-thumbnail video">
 
                     <div class="post-thumb">
-                        <img src="img/post2.jpg" alt="video">
+                        <img src="{{ asset('img/post2.jpg') }}" alt="video">
                         <div class="overlay"></div>
 
                         <a href="https://www.youtube.com/watch?v=bTqVqk7FSmY" class="play-video js-popup-iframe">
-                            <img src="img/video-format.png" alt="play">
+                            <img src="{{ asset('img/video-format.png') }}" alt="play">
                         </a>
                     </div>
 
                     <div class="post__content">
 
                         <div class="post__author author vcard">
-                            <img src="img/avatar7.png" alt="author">
+                            <img src="{{ asset('img/avatar7.png') }}" alt="author">
                             Posted by
 
                             <div class="post__author-name fn">
@@ -601,7 +600,7 @@
                             </p>
                             <div class="author-info-wrap table">
                                 <div class="testimonial-img-author table-cell">
-                                    <img src="img/avatar3.png" alt="author">
+                                    <img src="{{ asset('img/avatar3.png') }}" alt="author">
                                 </div>
                                 <div class="author-info table-cell">
                                     <h6 class="author-name">Angelina Johnson</h6>
@@ -618,7 +617,7 @@
                     <div class="post__content">
 
                         <div class="post__author author vcard">
-                            <img src="img/avatar9.png" alt="author">
+                            <img src="{{ asset('img/avatar9.png') }}" alt="author">
                             Posted by
 
                             <div class="post__author-name fn">
@@ -674,7 +673,7 @@
                     <div class="post__content">
 
                         <div class="post__author author vcard">
-                            <img src="img/avatar6.png" alt="author">
+                            <img src="{{ asset('img/avatar6.png') }}" alt="author">
                             Posted by
 
                             <div class="post__author-name fn">
@@ -731,7 +730,7 @@
                 <article class="hentry post post-standard has-post-thumbnail">
 
                     <div class="post-thumb">
-                        <img src="img/post4.jpg" alt="seo">
+                        <img src="{{ asset('img/post4.jpg') }}" alt="seo">
                         <div class="overlay"></div>
                         <a href="img/post4.jpg" class="link-image js-zoom-image">
                             <i class="seoicon-zoom"></i>
@@ -744,7 +743,7 @@
                     <div class="post__content">
 
                         <div class="post__author author vcard">
-                            <img src="img/avatar6.png" alt="author">
+                            <img src="{{ asset('img/avatar6.png') }}" alt="author">
                             Posted by
 
                             <div class="post__author-name fn">
@@ -815,7 +814,7 @@
                     <div class="post__content">
 
                         <div class="post__author author vcard">
-                            <img src="img/avatar7.png" alt="author">
+                            <img src="{{ asset('img/avatar7.png') }}" alt="author">
                             Posted by
 
                             <div class="post__author-name fn">
@@ -983,7 +982,7 @@
 
                 <div class="widget w-request bg-boxed-red">
                     <div class="w-request-content">
-                        <img src="img/request.png" alt="request">
+                        <img src="{{ asset('img/request.png') }}" alt="request">
                         <h4 class="w-request-content-title">Request
                             a Free Quote</h4>
                         <p class="w-request-content-text">Gothica, quam nunc putamus parum claram, anteposuerit
@@ -1218,9 +1217,9 @@
                     </div>
 
                     <div class="images-block">
-                        <img src="img/subscr-gear.png" alt="gear" class="gear">
-                        <img src="img/subscr1.png" alt="mail" class="mail">
-                        <img src="img/subscr-mailopen.png" alt="mail" class="mail-2">
+                        <img src="{{ asset('img/subscr-gear.png') }}" alt="gear" class="gear">
+                        <img src="{{ asset('img/subscr1.png') }}" alt="mail" class="mail">
+                        <img src="{{ asset('img/subscr-mailopen.png') }}" alt="mail" class="mail-2">
                     </div>
                 </div>
             </div>
@@ -1257,19 +1256,19 @@
 
                     <div class="socials">
                         <a href="#" class="social__item">
-                            <img src="svg/circle-facebook.svg" alt="facebook">
+                            <img src="{{ asset('svg/circle-facebook.svg') }}" alt="facebook">
                         </a>
                         <a href="#" class="social__item">
-                            <img src="svg/twitter.svg" alt="twitter">
+                            <img src="{{ asset('svg/twitter.svg') }}" alt="twitter">
                         </a>
                         <a href="#" class="social__item">
-                            <img src="svg/google.svg" alt="google">
+                            <img src="{{ asset('svg/google.svg') }}" alt="google">
                         </a>
                         <a href="#" class="social__item">
-                            <img src="svg/youtube.svg" alt="youtube">
+                            <img src="{{ asset('svg/youtube.svg') }}" alt="youtube">
                         </a>
                         <a href="#" class="social__item">
-                            <img src="svg/rss.svg" alt="rss">
+                            <img src="{{ asset('svg/rss.svg') }}" alt="rss">
                         </a>
                     </div>
                 </div>
@@ -1448,5 +1447,4 @@
 
 </body>
 
-<!-- Mirrored from html.crumina.net/html-seosight/14_blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Mar 2019 15:31:16 GMT -->
 </html>
