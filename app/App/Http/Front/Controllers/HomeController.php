@@ -13,6 +13,12 @@ class HomeController
      */
     public function index()
     {
-        return view('welcome');
+        $articles = Article::query()
+            ->published()
+            ->withTranslation()
+            ->orderBy('publish_date', 'desc')
+            ->orderBy('id', 'desc')
+            ->simplePaginate(10);
+        return view('welcome', compact('articles'));
     }
 }

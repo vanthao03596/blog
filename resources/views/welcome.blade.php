@@ -454,418 +454,77 @@
     <div class="row medium-padding120">
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
             <main class="main">
+                @if($articles->isNotEmpty())
+                    @foreach($articles as $article)
+                        <article class="hentry post post-standard has-post-thumbnail">
 
-                <article class="hentry post post-standard has-post-thumbnail sticky">
+                            <div class="post-thumb">
+                                <img src="{{ asset('img/post4.jpg') }}" alt="{{ $article->name }}">
+                                <div class="overlay"></div>
+                                <a href="{{ asset('img/post4.jpg') }}" class="link-image js-zoom-image">
+                                    <i class="seoicon-zoom"></i>
+                                </a>
+                                <a href="{{ route('articles.show', [$article->slug]) }}" class="link-post">
+                                    <i class="seoicon-link-bold"></i>
+                                </a>
+                            </div>
 
-                    <div class="post-thumb">
-                        <img src="{{ asset('img/post1.jpg') }}" alt="seo">
-                        <div class="overlay"></div>
-                        <a href="img/post1.jpg" class="link-image js-zoom-image">
-                            <i class="seoicon-zoom"></i>
-                        </a>
-                        <a href="#" class="link-post">
-                            <i class="seoicon-link-bold"></i>
-                        </a>
-                    </div>
+                            <div class="post__content">
 
-                    <div class="post__content">
+                                <div class="post__author author vcard">
+                                    <img src="{{ asset('img/avatar6.png') }}" alt="author">
+                                    Posted by
 
-                         <div class="post__author author vcard">
-                             <img src="{{ asset('img/avatar6.png') }}" alt="author">
-                             Posted by
-
-                             <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">Admin</a>
-                             </div>
-
-                         </div>
-
-                        <div class="post__content-info">
-
-                                <h2 class="post__title entry-title ">
-                                    <a href="15_blog_details.html">The Important & Standard Post Format</a>
-                                </h2>
-
-                                <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-04-17 12:00:00">
-                                            April 17, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Video</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        6
-                                    </span>
+                                    <div class="post__author-name fn">
+                                        <a href="#" class="post__author-link">Me</a>
+                                    </div>
 
                                 </div>
 
-                                    <p class="post__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                        euismod tincidunt ut laoreet dolore.
+                                <div class="post__content-info">
+
+                                    <h2 class="post__title entry-title ">
+                                        <a href="{{ route('articles.show', [$article->slug]) }}">{{ $article->name }}</a>
+                                    </h2>
+
+                                    <div class="post-additional-info">
+
+                                            <span class="post__date">
+
+                                                <i class="seoicon-clock"></i>
+
+                                                <time class="published" datetime="{{ $article->publish_date }}">
+                                                    {{ $article->publish_date->toFormattedDateString() }}
+                                                </time>
+
+                                            </span>
+
+                                            <span class="category">
+                                                <i class="seoicon-tags"></i>
+                                                <a href="#">Business,</a>
+                                                <a href="#">Seo</a>
+                                            </span>
+
+                                            <span class="post__comments">
+                                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+                                                6
+                                            </span>
+
+                                    </div>
+
+                                    <p class="post__text">{{ $article->short_content }}
                                     </p>
 
-                                <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                    <span class="text">Continue Reading</span>
-                                    <i class="seoicon-right-arrow"></i>
-                                </a>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="hentry post post-standard has-post-thumbnail video">
-
-                    <div class="post-thumb">
-                        <img src="{{ asset('img/post2.jpg') }}" alt="video">
-                        <div class="overlay"></div>
-
-                        <a href="https://www.youtube.com/watch?v=bTqVqk7FSmY" class="play-video js-popup-iframe">
-                            <img src="{{ asset('img/video-format.png') }}" alt="play">
-                        </a>
-                    </div>
-
-                    <div class="post__content">
-
-                        <div class="post__author author vcard">
-                            <img src="{{ asset('img/avatar7.png') }}" alt="author">
-                            Posted by
-
-                            <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">Victoria Bush</a>
-                            </div>
-
-                        </div>
-
-                        <div class="post__content-info">
-
-                            <h2 class="post__title entry-title ">
-                                <a href="15_blog_details.html">YouTube Video Post Format</a>
-                            </h2>
-
-                            <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-04-10 12:00:00">
-                                            April 10, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Video</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        0
-                                    </span>
-
-
-                            </div>
-
-
-                            <p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem
-                                consuetudium lectorum quam nunc putamus parum claram.
-                            </p>
-
-                            <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                <span class="text">Continue Reading</span>
-                                <i class="seoicon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="hentry post post-standard has-post-thumbnail quote">
-
-                    <div class="post-thumb bg-boxed-dark">
-                        <div class="testimonial-content">
-                            <p class="text">Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-                                anteposuerit litterarum formas humanitatis per seacula quarta decima.
-                            </p>
-                            <div class="author-info-wrap table">
-                                <div class="testimonial-img-author table-cell">
-                                    <img src="{{ asset('img/avatar3.png') }}" alt="author">
-                                </div>
-                                <div class="author-info table-cell">
-                                    <h6 class="author-name">Angelina Johnson</h6>
-                                    <div class="author-company">Codecanyon</div>
+                                    <a href="{{ route('articles.show', [$article->slug]) }}" class="btn btn-small btn--dark btn-hover-shadow">
+                                        <span class="text">Continue Reading</span>
+                                        <i class="seoicon-right-arrow"></i>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="quote">
-                                <i class="seoicon-quotes"></i>
-                            </div>
-                        </div>
 
-                    </div>
-
-                    <div class="post__content">
-
-                        <div class="post__author author vcard">
-                            <img src="{{ asset('img/avatar9.png') }}" alt="author">
-                            Posted by
-
-                            <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">Jassie Bush</a>
-                            </div>
-
-                        </div>
-
-                        <div class="post__content-info">
-
-                            <h2 class="post__title entry-title ">
-                                <a href="15_blog_details.html">Quote Post Format</a>
-                            </h2>
-
-                            <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-04-03 12:00:00">
-                                            April 3, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Business,</a>
-                                        <a href="#">Seo</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        243
-                                    </span>
-
-                            </div>
-
-                            <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                <span class="text">Continue Reading</span>
-                                <i class="seoicon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </article>
-
-
-                <article class="hentry post post-standard">
-
-
-                    <div class="post__content">
-
-                        <div class="post__author author vcard">
-                            <img src="{{ asset('img/avatar6.png') }}" alt="author">
-                            Posted by
-
-                            <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">Admin</a>
-                            </div>
-
-                        </div>
-
-                        <div class="post__content-info">
-
-                            <h2 class="post__title entry-title ">
-                                <a href="15_blog_details.html">Investigationes demonstraverunt lectores legere me lius quod</a>
-                            </h2>
-
-                            <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-04-01 12:00:00">
-                                            April 1, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Business,</a>
-                                        <a href="#">Seo</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        6
-                                    </span>
-
-                            </div>
-
-                            <p class="post__text">Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-                                anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima
-                                est etiam processus.
-                            </p>
-
-                            <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                <span class="text">Continue Reading</span>
-                                <i class="seoicon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="hentry post post-standard has-post-thumbnail">
-
-                    <div class="post-thumb">
-                        <img src="{{ asset('img/post4.jpg') }}" alt="seo">
-                        <div class="overlay"></div>
-                        <a href="img/post4.jpg" class="link-image js-zoom-image">
-                            <i class="seoicon-zoom"></i>
-                        </a>
-                        <a href="#" class="link-post">
-                            <i class="seoicon-link-bold"></i>
-                        </a>
-                    </div>
-
-                    <div class="post__content">
-
-                        <div class="post__author author vcard">
-                            <img src="{{ asset('img/avatar6.png') }}" alt="author">
-                            Posted by
-
-                            <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">Admin</a>
-                            </div>
-
-                        </div>
-
-                        <div class="post__content-info">
-
-                            <h2 class="post__title entry-title ">
-                                <a href="15_blog_details.html">Standard Post Format</a>
-                            </h2>
-
-                            <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-03-20 12:00:00">
-                                            March 20, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Business,</a>
-                                        <a href="#">Seo</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        6
-                                    </span>
-
-                            </div>
-
-                            <p class="post__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                euismod tincidunt ut laoreet dolore.
-                            </p>
-
-                            <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                <span class="text">Continue Reading</span>
-                                <i class="seoicon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="hentry post post-standard has-post-thumbnail link">
-
-                    <div class="post-thumb bg-boxed-primary">
-                        <div class="thumb-content">
-                            <a href="15_blog_details.html" class="h5 thumb-content-title">SOESIGHT - SEO, Digital Marketing, Social Media PSD Template</a>
-                            <a href="#" class="site-link">www.themeforest.com</a>
-                            <a href="15_blog_details.html" class="post-link">
-                                <i class="seoicon-link"></i>
-                            </a>
-                        </div>
-
-                        <div class="overlay"></div>
-
-                    </div>
-
-                    <div class="post__content">
-
-                        <div class="post__author author vcard">
-                            <img src="{{ asset('img/avatar7.png') }}" alt="author">
-                            Posted by
-
-                            <div class="post__author-name fn">
-                                <a href="#" class="post__author-link">Jassie Bush</a>
-                            </div>
-
-                        </div>
-
-                        <div class="post__content-info">
-
-                            <h2 class="post__title entry-title ">
-                                <a href="#">Link Post Format</a>
-                            </h2>
-
-                            <div class="post-additional-info">
-
-                                    <span class="post__date">
-
-                                        <i class="seoicon-clock"></i>
-
-                                        <time class="published" datetime="2016-03-08 12:00:00">
-                                            March 8, 2016
-                                        </time>
-
-                                    </span>
-
-                                    <span class="category">
-                                        <i class="seoicon-tags"></i>
-                                        <a href="#">Links,</a>
-                                        <a href="#">Partners</a>
-                                    </span>
-
-                                    <span class="post__comments">
-                                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                        0
-                                    </span>
-
-                            </div>
-
-                            <p class="post__text">Nam liber tempor cum soluta nobis eleifend option congue nihil
-                                imperdiet doming id quod mazim placerat facer.
-                            </p>
-
-                            <a href="15_blog_details.html" class="btn btn-small btn--dark btn-hover-shadow">
-                                <span class="text">Continue Reading</span>
-                                <i class="seoicon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </article>
+                        </article>
+                    @endforeach
+                @endif
             </main>
 
             <div class="row">
