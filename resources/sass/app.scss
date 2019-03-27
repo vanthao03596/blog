@@ -1,9 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
-@import 'normalize';
-@import 'grid.css';
-@import 'base.css';
-@import 'blocks.css';
-@import 'layouts.css';
-@import 'modules.css';
-@import 'widgets-styles.css';
-@import 'primary-menu.css';
+@import 'components/code.scss';
+@tailwind preflight;
+
+@tailwind components;
+
+.article-wrap {
+    @apply pt-10 pr-8 pl-10 pb-12 flex-1 bg-transparent rounded-custom overflow-hidden shadow-lg z-0 relative;
+    transition: all 0.2s ease;
+    min-height: 370px;
+}
+
+.article-wrap:hover {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+.item-image {
+    @apply bg-cover bg-no-repeat absolute pin-x pin-y w-full h-full;
+    z-index: -1;
+    background: 50%;
+}
+
+.item-image::before {
+    @apply block w-full h-full;
+    content: '';
+    opacity: 0.4;
+    background-color: #394245;
+    background-image: linear-gradient(234deg, #394245, #000);
+}
+
+.primary-tag {
+    @apply text-white absolute py-1 px-2 no-underline text-sm uppercase bg-transparent;
+    z-index: 2;
+    bottom: 40px;
+    margin-left: -8px;
+    border-radius: 20px;
+}
+
+.primary-tag:hover {
+    color: #161b3d !important;
+    background-color: #fff;
+}
+@tailwind utilities;

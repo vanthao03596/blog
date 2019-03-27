@@ -13,12 +13,7 @@ class HomeController
      */
     public function index()
     {
-        $articles = Article::query()
-            ->published()
-            ->withTranslation()
-            ->orderBy('publish_date', 'desc')
-            ->orderBy('id', 'desc')
-            ->simplePaginate(10);
-        return view('welcome', compact('articles'));
+        $articles = Article::latest()->get();
+        return view('home', compact('articles'));
     }
 }

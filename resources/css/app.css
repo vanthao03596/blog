@@ -1,0 +1,152 @@
+@tailwind preflight;
+
+@tailwind components;
+
+.article-wrap {
+    @apply pt-10 pr-8 pl-10 pb-12 flex-1 bg-transparent rounded-custom overflow-hidden shadow-lg z-0 relative;
+    transition: all 0.2s ease;
+    min-height: 370px;
+}
+
+.article-wrap:hover {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+.item-image {
+    @apply bg-cover bg-no-repeat absolute pin-x pin-y w-full h-full;
+    z-index: -1;
+    background: 50%;
+}
+
+.item-image::before {
+    @apply block w-full h-full;
+    content: '';
+    opacity: 0.4;
+    background-color: #394245;
+    background-image: linear-gradient(234deg, #394245, #000);
+}
+
+.primary-tag {
+    @apply text-white absolute py-1 px-2 no-underline text-sm uppercase bg-transparent;
+    z-index: 2;
+    bottom: 40px;
+    margin-left: -8px;
+    border-radius: 20px;
+}
+
+.primary-tag:hover {
+    color: #161b3d !important;
+    background-color: #fff;
+}
+
+pre code {
+    @apply .border-2 .rounded .mb-4 .font-mono .text-sm;
+    display: block;
+    background: white;
+    padding: 0.5em;
+    color: #333333;
+    overflow-x: auto;
+}
+
+/**
+ * Shades of Purple Theme — for Highlightjs.
+ *
+ * @author (c) Ahmad Awais <https://twitter.com/mrahmadawais/>
+ * @link GitHub Repo → https://github.com/ahmadawais/Shades-of-Purple-HighlightJS
+ * @version 1.5.0
+ */
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  /* Custom font is optional */
+  /* font-family: 'Operator Mono', 'Fira Code', 'Menlo', 'Monaco', 'Courier New', 'monospace';  */
+  line-height: 1.45;
+  padding: 2rem;
+  background: #2d2b57;
+  font-weight: normal;
+}
+
+.hljs-title {
+  color: #fad000;
+  font-weight: normal;
+}
+
+.hljs-name {
+  color: #a1feff;
+}
+
+.hljs-tag {
+  color: #ffffff;
+}
+
+.hljs-attr {
+  color: #f8d000;
+  font-style: italic;
+}
+
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section {
+  color: #fb9e00;
+}
+
+.hljs-keyword {
+  color: #fb9e00;
+}
+
+.hljs,
+.hljs-subst {
+  color: #e3dfff;
+}
+
+.hljs-string,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-code,
+.hljs-regexp,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.hljs-quote,
+.hljs-deletion {
+  color: #4cd213;
+}
+
+.hljs-meta,
+.hljs-meta-string {
+  color: #fb9e00;
+}
+
+.hljs-comment {
+  color: #ac65ff;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name,
+.hljs-strong {
+  font-weight: normal;
+}
+
+.hljs-literal,
+.hljs-number {
+  color: #fa658d;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+
+@tailwind utilities;
+

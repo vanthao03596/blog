@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
@@ -43,13 +42,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes(): void
     {
-        $locale = Request::segment(1);
         Route::middleware('web')
-            ->prefix($locale)
+            ->prefix('auth')
             ->group(base_path('routes/auth.php'));
 
         Route::middleware('web')
-            ->prefix($locale)
              ->group(base_path('routes/front.php'));
     }
 

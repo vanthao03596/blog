@@ -15,8 +15,20 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table): void {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->text('content');
+            //Seo
+            $table->string('title')->nullable();
+            $table->string('description')->nullable();
+            $table->string('og:title')->nullable();
+            $table->string('og:type')->default('website');
+            $table->string('og:description')->nullable();
+            $table->string('og:image')->nullable();
+            $table->text('image_url');
+
             $table->boolean('published')->default(false);
-            $table->datetime('publish_date');
+            $table->datetime('publish_date')->nullable();
             $table->timestamps();
         });
     }

@@ -11,15 +11,22 @@
         "postinstall": "npm run prod"
     },
     "devDependencies": {
+        "axios": "^0.18",
         "cross-env": "^5.1",
-        "laravel-mix": "^4.0.7",
-        "laravel-mix-purgecss": "^4.1.0",
-        "resolve-url-loader": "2.3.1",
-        "sass": "^1.17.3",
-        "sass-loader": "7.*"
+        "laravel-mix": "^4.0.14",
+        "laravel-mix-purgecss": "^4.1",
+        "laravel-mix-tailwind": "^0.1.0",
+        "lodash": "^4.17.5",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "tailwindcss": "^0.7.4",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.4"
     },
     "dependencies": {
-        "const": "^1.0.0",
-        "glob-all": "^3.1.0"
+        "highlight.js": "^9.15.6",
+        "turbolinks": "^5.2.0"
     }
 }

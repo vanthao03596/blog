@@ -1,31 +1,15 @@
 <?php
 
+use Illuminate\Support\HtmlString;
+use League\CommonMark\CommonMarkConverter;
+
 function locale()
 {
     return config('app.locale');
 }
-function sanitizeForTease($string)
+function markdown($html)
 {
-        $string = trim($string);
-        //remove html
-        $string = strip_tags($string);
-        //replace multiple spaces
-        $string = preg_replace("/\s+/", ' ', $string);
-        return $string;
+    return new HtmlString(
+        app(CommonMarkConverter::class)->convertToHtml($html)
+    );
 }
-
-function tease($string, $length = 200, $moreTextIndicator = '...')
-{
-    $sanitizedString = sanitizeForTease($string);
-        if (strlen($sanitizedString) == 0) {
-            return $string;
-        }
-        if (strlen($sanitizedString) <= $length) {
-            return $string;
-        }
-        $ww = wordwrap($sanitizedString, $length, "\n");
-        $shortenedString = substr($ww, 0, strpos($ww, "\n")).$moreTextIndicator;
-        return $shortenedString;
-}
-
-

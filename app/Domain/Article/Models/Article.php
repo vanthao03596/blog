@@ -1,41 +1,31 @@
 <?php
 
+
 namespace Domain\Article\Models;
 
-use Dimsav\Translatable\Translatable;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Domain\Model;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\Log;
 
 class Article extends Model
 {
-    use Translatable;
+    use Sluggable;
 
-    public $translatedAttributes = ['name', 'slug', 'content'];
-
-    protected $dates = ['publish_date'];
-
-    protected $casts = [
-        'published' => 'boolean'
-    ];
-
-    public function scopePublished(Builder $query)
+    public function sluggable()
     {
-        $query->where('published', true);
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
     }
 
-    public function publish()
+    public function getRouteKeyName()
     {
-        $this->published = true;
-        if (! $this->publish_date) {
-            $this->publish_date = now();
-        }
-        $this->save();
-        Log::info("Post `{$this->title}` published.");
+        return 'slug';
     }
 
-    public function getShortContentAttribute()
+    public function asset_url()
     {
-        return tease($this->content, 120);
+        return asset('media/public/' . $this->image_url);
     }
 }

@@ -1,13 +1,15 @@
 <?php
 
+
 namespace App\Http\Front\Controllers;
+
 
 use Domain\Article\Models\Article;
 
 class ArticleController
 {
-    public function show()
+    public function show(Article $article)
     {
-        echo '1';
+        return view('single', compact('article'));
     }
 }

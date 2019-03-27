@@ -2,7 +2,7 @@
 
 namespace App\Console;
 
-use App\Console\Commands\DummyPost;
+use App\Console\Commands\BlogCrawler;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        DummyPost::class
+        BlogCrawler::class,
     ];
 
     /**

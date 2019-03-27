@@ -14,5 +14,11 @@ use App\Http\Front\Controllers\HomeController;
 |
 */
 
+
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('{article}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/tags', function () {
+    return view('tag');
+});
+
